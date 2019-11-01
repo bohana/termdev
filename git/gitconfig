@@ -1,0 +1,7 @@
+[user]
+    email = bohana@gmail.com
+    name = Bruno Ohana
+[alias]
+    lo = log --pretty=oneline --abbrev-commit --graph --decorate
+    am = commit --amend
+    cm = commit -m 
