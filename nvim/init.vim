@@ -13,7 +13,6 @@ set tabstop=4
 set softtabstop=4
 set expandtab
 set autoindent
-set shiftwidth=4
 
 let python_highlight_all=1
 
@@ -36,10 +35,12 @@ set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 nnoremap <leader><space> :nohlsearch<CR>
 
-" saving
 nnoremap <leader>w :w<CR>
 nnoremap <leader>v :vsplit<CR>
 nnoremap <leader>q :q<CR>
+
+" window navigation
+nnoremap <leader>1 <C-w>w
 
 " Tab navigation
 nnoremap <leader>tt :tabnext<CR>
@@ -72,11 +73,14 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdcommenter'
 
 Plug 'sbdchd/neoformat'
+Plug 'nvie/vim-flake8'
 
 call plug#end()
 
-
+"
 " Plugin configuration
+"
+
 " Unified color scheme (default: dark)
 colo seoul256
 
@@ -95,3 +99,6 @@ augroup fmt
     autocmd!
     autocmd BufWritePre * undojoin | Neoformat
 augroup END
+
+" run flake8 on save
+autocmd BufWritePost *.py call flake8#Flake8()
