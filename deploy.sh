@@ -19,3 +19,6 @@ nvim -c "PlugInstall|qa"
 
 echo "[termdev] - python packages"
 pip install -r python/requirements.txt
+
+echo "[termdev] - tmux"
+cp tmux/tmux.conf ~/.tmux.conf
