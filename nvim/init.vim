@@ -4,13 +4,6 @@ set bg=dark
 set number
 set nowrap
 
-" Pathogen
-execute pathogen#infect()
-
-" FZF
-" If installed using git
-"set rtp+=~/.fzf
-
 " # as leader
 let mapleader = "#"
 
@@ -45,10 +38,6 @@ nnoremap <leader>f :FZF
 nnoremap <leader>w :w<CR>
 nnoremap <leader>v :vsplit<CR>
 nnoremap <leader>q :q<CR>
-
-" tab completion
-let g:pydiction_location = '/home/sent/.vim/bundle/pydiction/complete-dict'
-let g:pydiction_menu_height = 3
 
 " Tab navigation
 nnoremap <leader>tt :tabnext<CR>
