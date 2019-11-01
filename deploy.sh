@@ -16,3 +16,6 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 echo "[termdev] - installing plugins"
 nvim -c "PlugInstall|qa"
+
+echo "[termdev] - python packages"
+pip install -r python/requirements.txt
