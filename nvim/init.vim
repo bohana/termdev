@@ -17,12 +17,15 @@ set shiftwidth=4
 
 let python_highlight_all=1
 
+" avoid vim ESC key delays
+" https://www.johnhawthorn.com/2012/09/vi-escape-delays/
+set timeoutlen=1000 ttimeoutlen=0
+
 " UI improvements
 set wildmenu
 set showmatch
 set noerrorbells
 
-set cursorline          " highlight current line
 set showcmd
 
 " dealing with syntax
@@ -32,7 +35,6 @@ syntax enable
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 nnoremap <leader><space> :nohlsearch<CR>
-nnoremap <leader>f :FZF
 
 " saving
 nnoremap <leader>w :w<CR>
@@ -57,3 +59,39 @@ endfunction
 
 nnoremap <leader>s :call <SID>StripTrailingWhitespaces()<CR>
 
+" plugins
+
+call plug#begin('~/.local/share/nvim/plugged')
+
+Plug 'davidhalter/jedi-vim'
+Plug 'tpope/vim-sensible'
+Plug 'junegunn/seoul256.vim'
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdcommenter'
+
+Plug 'sbdchd/neoformat'
+
+call plug#end()
+
+
+" Plugin configuration
+" Unified color scheme (default: dark)
+colo seoul256
+
+" neoformat (requires yapf)
+" Enable alignment
+let g:neoformat_basic_format_align = 1
+" Enable tab to spaces conversion
+let g:neoformat_basic_format_retab = 1
+" Enable trimmming of trailing whitespace
+let g:neoformat_basic_format_trim = 1
+
+let g:neoformat_enabled_python = ['yapf']
+
+
+augroup fmt
+    autocmd!
+    autocmd BufWritePre * undojoin | Neoformat
+augroup END
