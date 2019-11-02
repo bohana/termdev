@@ -5,3 +5,5 @@
     lo = log --pretty=oneline --abbrev-commit --graph --decorate
     am = commit --amend
     cm = commit -m 
+[credential]
+	helper = cache --timeout=900
