@@ -65,6 +65,7 @@ nnoremap <leader>s :call <SID>StripTrailingWhitespaces()<CR>
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'davidhalter/jedi-vim'
+
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/seoul256.vim'
 
@@ -102,3 +103,6 @@ augroup END
 
 " run flake8 on save
 autocmd BufWritePost *.py call flake8#Flake8()
+
+" auto completion too slow for large modules
+let g:jedi#popup_on_dot = 0
