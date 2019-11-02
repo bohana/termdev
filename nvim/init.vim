@@ -47,15 +47,15 @@ nnoremap <leader>tt :tabnext<CR>
 
 " Tidy up white spaces
 function! <SID>StripTrailingWhitespaces()
-    " Preparation: save last search, and cursor position.
-    let _s=@/
-    let l = line(".")
-    let c = col(".")
-    " Do the business:
-    %s/\s\+$//e
-    " Clean up: restore previous search history, and cursor position
-    let @/=_s
-    call cursor(l, c)
+        " Preparation: save last search, and cursor position.
+        let _s=@/
+        let l = line(".")
+        let c = col(".")
+        " Do the business:
+        %s/\s\+$//e
+        " Clean up: restore previous search history, and cursor position
+        let @/=_s
+        call cursor(l, c)
 endfunction
 
 nnoremap <leader>s :call <SID>StripTrailingWhitespaces()<CR>
@@ -96,8 +96,8 @@ let g:neoformat_enabled_python = ['yapf']
 
 
 augroup fmt
-    autocmd!
-    autocmd BufWritePre * undojoin | Neoformat
+        autocmd!
+        autocmd BufWritePre *.py undojoin | Neoformat
 augroup END
 
 " run flake8 on save
