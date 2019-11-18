@@ -38,3 +38,5 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
+# term colors w/ tmux
+export TERM="tmux-256color"
