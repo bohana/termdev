@@ -74,7 +74,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdcommenter'
 
 Plug 'sbdchd/neoformat'
-Plug 'nvie/vim-flake8'
+
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 call plug#end()
 
@@ -101,8 +102,11 @@ augroup fmt
         autocmd BufWritePre *.py undojoin | Neoformat
 augroup END
 
-" run flake8 on save
-autocmd BufWritePost *.py call flake8#Flake8()
 
 " auto completion too slow for large modules
 let g:jedi#popup_on_dot = 0
+
+" pymode in python3
+let g:pymode_python = 'python3'
+let g:pymode_options_max_line_length = 100
+let g:pymode_indent = 1
