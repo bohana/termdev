@@ -14,6 +14,10 @@ set softtabstop=4
 set expandtab
 set autoindent
 
+" Python host progs - disable py2; use py3 from path
+let g:python_host_prog=""
+let g:python3_host_prog="python"
+
 let python_highlight_all=1
 
 " avoid vim ESC key delays
