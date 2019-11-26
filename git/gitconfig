@@ -6,4 +6,16 @@
     am = commit --amend
     cm = commit -m 
 [credential]
-	helper = cache --timeout=900
+	helper = cache --timeout=3600
+[push]
+	default = simple
+[color]
+	ui = auto
+[alias]
+        lo = log --oneline --graph --decorate
+        cm = commit -m
+        s  = status -s -b
+        rs = remote show origin 
+        br = branch -avv
+[core]
+	autocrlf = input
