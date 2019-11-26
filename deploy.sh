@@ -3,7 +3,7 @@ mkdir -p ~/.config/nvim
 
 echo "[termdev] - copying bash helper scripts"
 cp -v bash/*sh ~/.termdev
-chmod 750 ~/.termdev/*
+chmod 750 ~/.termdev/*sh
 
 echo "[termdev] - git setup"
 cp -v git/gitconfig ~/.gitconfig

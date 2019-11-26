@@ -39,4 +39,4 @@ bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
 # term colors w/ tmux
-export TERM="tmux-256color"
+export TERM="screen-256color"
