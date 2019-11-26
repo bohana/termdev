@@ -37,6 +37,7 @@ set showcmd
 " dealing with syntax
 syntax enable
 
+
 " searching
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
@@ -71,8 +72,6 @@ nnoremap <leader>s :call <SID>StripTrailingWhitespaces()<CR>
 
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'davidhalter/jedi-vim'
-
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/seoul256.vim'
 
@@ -101,17 +100,13 @@ let g:neoformat_basic_format_retab = 1
 " Enable trimmming of trailing whitespace
 let g:neoformat_basic_format_trim = 1
 
-let g:neoformat_enabled_python = ['yapf']
-
+let g:neoformat_enabled_python = ['autopep8']
 
 augroup fmt
         autocmd!
         autocmd BufWritePre *.py undojoin | Neoformat
 augroup END
 
-
-" auto completion too slow for large modules
-let g:jedi#popup_on_dot = 0
 
 " pymode in python3
 let g:pymode_python = 'python3'
