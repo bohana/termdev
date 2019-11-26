@@ -2,3 +2,4 @@ yapf
 pynvim
 jedi
 flake8
+pylama
