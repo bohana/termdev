@@ -14,6 +14,9 @@ set softtabstop=4
 set expandtab
 set autoindent
 
+" move cwd to last opened file
+set autochdir
+
 " Python host progs - disable py2; use py3 from path
 let g:python_host_prog=""
 let g:python3_host_prog="python"
