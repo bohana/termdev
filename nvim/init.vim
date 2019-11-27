@@ -49,6 +49,7 @@ nnoremap <leader>q :q<CR>
 
 " window navigation
 nnoremap <leader>1 <C-w>w
+nnoremap <leader>2 <C-w>w
 
 " Tab navigation
 nnoremap <leader>tt :tabnext<CR>
@@ -83,6 +84,8 @@ Plug 'sbdchd/neoformat'
 
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
+Plug 'ludovicchabant/vim-gutentags'
+
 call plug#end()
 
 "
@@ -112,3 +115,6 @@ augroup END
 let g:pymode_python = 'python3'
 let g:pymode_options_max_line_length = 100
 let g:pymode_indent = 1
+
+" gutentags cache location
+let g:gutentags_cache_dir = '~/.cache/tags'
