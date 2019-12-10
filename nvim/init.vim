@@ -47,12 +47,18 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>v :vsplit<CR>
 nnoremap <leader>q :q<CR>
 
-" window navigation
+" window navigation, fwd and back
 nnoremap <leader>1 <C-w>w
-nnoremap <leader>2 <C-w>w
+nnoremap <leader>2 <C-w>W 
 
 " Tab navigation
 nnoremap <leader>tt :tabnext<CR>
+
+" open shell in window split
+nnoremap <leader>s :vsplit term://bash<CR>
+
+" in terminal - remap exit from terminal mode to Ctrl-\\
+tnoremap <C-\><C-\> <C-\><C-n>
 
 " Tidy up white spaces
 function! <SID>StripTrailingWhitespaces()
@@ -67,7 +73,7 @@ function! <SID>StripTrailingWhitespaces()
         call cursor(l, c)
 endfunction
 
-nnoremap <leader>s :call <SID>StripTrailingWhitespaces()<CR>
+nnoremap <leader>c :call <SID>StripTrailingWhitespaces()<CR>
 
 " plugins
 
