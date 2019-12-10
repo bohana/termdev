@@ -86,6 +86,8 @@ Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 Plug 'ludovicchabant/vim-gutentags'
 
+Plug 'kien/ctrlp.vim'
+
 call plug#end()
 
 "
@@ -95,7 +97,7 @@ call plug#end()
 " Unified color scheme (default: dark)
 colo seoul256
 
-" neoformat (requires yapf)
+" neoformat w/ autopep8
 " Enable alignment
 let g:neoformat_basic_format_align = 1
 " Enable tab to spaces conversion
@@ -118,3 +120,8 @@ let g:pymode_indent = 1
 
 " gutentags cache location
 let g:gutentags_cache_dir = '~/.cache/tags'
+
+" ctrl+p - ignore list
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,__pycache__,*.pyo,*.pyc
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
