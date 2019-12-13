@@ -11,7 +11,6 @@ export EDITOR=nvim
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 
 
-
 #
 # history
 # - https://www.shellhacks.com/tune-command-line-history-bash/
@@ -40,3 +39,6 @@ bind '"\e[B": history-search-forward'
 
 # term colors w/ tmux
 export TERM="screen-256color"
+
+# Fuzzy Finder settings - https://github.com/junegunn/fzf
+export FZF_DEFAULT_OPTS='--height 20% --border'
