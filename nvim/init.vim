@@ -128,6 +128,6 @@ let g:pymode_indent = 1
 let g:gutentags_cache_dir = '~/.cache/tags'
 
 " ctrl+p - ignore list
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,__pycache__,*.pyo,*.pyc
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,__pycache__,*.pyo,*.pyc,build,dist
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
