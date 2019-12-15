@@ -102,6 +102,10 @@ call plug#end()
 
 " Unified color scheme (default: dark)
 colo seoul256
+" WSL/vim background color issue -
+" https://github.com/microsoft/terminal/issues/832
+highlight Normal ctermbg=black
+
 
 " neoformat w/ autopep8
 " Enable alignment
