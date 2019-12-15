@@ -8,8 +8,6 @@ umask 022
 # Tool options
 #
 export EDITOR=nvim
-export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
-
 
 #
 # history
