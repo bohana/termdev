@@ -1,0 +1,16 @@
+prompt_order = ["username", "conda", "git_branch", "directory", "line_break", "character"]
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character]      # The name of the module we are configuring is "character"
+symbol = "➜"     # The "symbol" segment is being set to "➜"
+
+[git_branch]
+symbol = "🌱"
+truncation_length = 10
+
+[directory]
+truncate_to_repo = false
+
+[conda]
+symbol = "🐍 "
+
