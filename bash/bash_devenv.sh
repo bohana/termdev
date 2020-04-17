@@ -29,7 +29,7 @@ HISTIGNORE='ls:ll:pwd:clear:history:gs:ps'
 shopt -s cmdhist
 
 # Append new history lines, clear the history list, re-read the history list, print prompt.
-export PROMPT_COMMAND="unset PS1; history -a; history -c; history -r; starship prompt"
+export PROMPT_COMMAND="history -a; history -c; history -r"
 
 # up/down arrows
 bind '"\e[A": history-search-backward'
