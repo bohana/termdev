@@ -3,3 +3,5 @@ pynvim
 jedi
 flake8
 pylama
+tldr
+pypyp
