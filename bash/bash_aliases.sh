@@ -1,6 +1,11 @@
 alias vim=nvim
 alias gs="git status"
+alias glo="got lo"
 alias ll="ls -ltr"
 alias psi="python setup.py install"
 alias pt="pytest -vv tests/"
 alias json="python -m json.tool|pygmentize -l javascript"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .-="cd -"
